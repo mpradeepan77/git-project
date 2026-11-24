@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workshop Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="container">
+    <header class="form-header">
+      <h1>Tech & AI Workshop 2026</h1>
+      <p>Register now to reserve your seat for hands-on sessions and certification.</p>
+    </header>
+
+    <form action="#" method="post" class="registration-form">
+      
+      <!-- Personal Information Section -->
+      <fieldset class="form-section">
+        <legend>Participant Details</legend>
+        
+        <div class="grid-2">
+          <div class="form-group">
+            <label for="fullname">Full Name *</label>
+            <input type="text" id="fullname" name="fullname" placeholder="e.g., Pradeepan M" required minlength="3">
+          </div>
+
+          <div class="form-group">
+            <label for="regno">Register / Employee ID *</label>
+            <input type="text" id="regno" name="regno" placeholder="e.g., 111526116111" pattern="[A-Za-z0-9]{5,15}" title="5 to 15 alphanumeric characters" required>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="name@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" pattern="[0-9]{10}" title="Enter a valid 10-digit phone number" required>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="form-group">
+            <label for="dob">Date of Birth *</label>
+            <input type="date" id="dob" name="dob" max="2010-12-31" required>
+          </div>
+
+          <div class="form-group">
+            <label for="org">College / Organization *</label>
+            <input type="text" id="org" name="org" placeholder="Enter your institution name" required>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Workshop Preferences Section -->
+      <fieldset class="form-section">
+        <legend>Workshop Preferences</legend>
+
+        <div class="grid-2">
+          <div class="form-group">
+            <label for="track">Select Workshop Track *</label>
+            <select id="track" name="track" required>
+              <option value="" disabled selected>-- Choose a Track --</option>
+              <option value="ai-ml">Generative AI & Machine Learning</option>
+              <option value="fullstack">Modern Full-Stack Web Development</option>
+              <option value="cloud">Cloud Computing & DevOps</option>
+              <option value="cyber">Cybersecurity & Ethical Hacking</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="experience">Experience Level (1 - Beginner, 5 - Expert)</label>
+            <input type="range" id="experience" name="experience" min="1" max="5" value="2">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Attendance Mode *</label>
+          <div class="inline-options">
+            <label><input type="radio" name="mode" value="offline" required checked> On-Campus (Offline)</label>
+            <label><input type="radio" name="mode" value="online"> Live Virtual (Online)</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Additional Sessions (Optional)</label>
+          <div class="inline-options">
+            <label><input type="checkbox" name="addons" value="hackathon"> Mini Hackathon</label>
+            <label><input type="checkbox" name="addons" value="networking"> Industry Networking</label>
+            <label><input type="checkbox" name="addons" value="kit"> Hardware Kit</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="idproof">Upload College / Company ID (PDF or Image) *</label>
+          <input type="file" id="idproof" name="idproof" accept=".pdf,.jpg,.jpeg,.png" required>
+        </div>
+
+        <div class="form-group">
+          <label for="expectations">What do you hope to learn from this workshop?</label>
+          <textarea id="expectations" name="expectations" rows="3" placeholder="Share your goals or questions..."></textarea>
+        </div>
+      </fieldset>
+
+      <!-- Declaration & Actions -->
+      <div class="form-group declaration">
+        <label>
+          <input type="checkbox" name="terms" required> I confirm that the details provided are accurate and agree to the workshop guidelines. *
+        </label>
+      </div>
+
+      <div class="button-group">
+        <button type="submit" class="btn btn-submit">Register Now</button>
+        <button type="reset" class="btn btn-reset">Reset Form</button>
+      </div>
+
+    </form>
+  </main>
+
+</body>
+</html>
